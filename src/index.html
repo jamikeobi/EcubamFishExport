@@ -1,36 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>FishAngular</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="././assets/css/plugins/bootstrap.min.css" />
+  <head>
+    <meta charset="utf-8" />
+    <title>FishAngular</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="././assets/css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="././assets/css/plugins/animate.min.css" />
     <link rel="stylesheet" href="././assets/css/plugins/magnific-popup.css" />
     <link rel="stylesheet" href="././assets/css/plugins/slick.css" />
     <link rel="stylesheet" href="././assets/css/plugins/slick-theme.css" />
-    <link rel="stylesheet" href="././assets/css/plugins/ion.rangeSlider.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="././assets/css/plugins/ion.rangeSlider.min.css"
+    />
 
     <link rel="stylesheet" href="././assets/fonts/flaticon/flaticon.css" />
-    <link rel="stylesheet" href="././assets/fonts/font-awesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="././assets/fonts/font-awesome/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="././assets/css/style.css" />
 
-    <link rel="icon" type="././assets/image/png" sizes="32x32" href="favicon.ico" />
-</head>
-<body>
-  <!-- <div class="andro_preloader">
+    <link
+      rel="icon"
+      type="././assets/image/png"
+      sizes="32x32"
+      href="favicon.ico"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <div class="andro_preloader">
     <div class="spinner">
       <div class="dot1"></div>
       <div class="dot2"></div>
     </div>
   </div> -->
-  <app-root></app-root>
 
+    <div
+      class="modal fade"
+      id="androNewsletterPopup"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog andro_newsletter-popup-modal modal-dialog-centered"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="assets/img/ig/3.jpg" alt="newsletter" />
+            <div
+              class="close-btn close newsletter-popup-trigger"
+              data-dismiss="modal"
+            >
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="andro_newsletter-popup-text-wrapper">
+              <h3>Join Our Newsletter</h3>
+              <p>
+                Sed porttitor lectus nibh. Curabitur arcu erat, accumsan id
+                imperdiet et, porttitor at sem. Curabitur aliquet quam id dui
+                posuere.
+              </p>
+            </div>
+            <form method="post" class="text-center">
+              <div class="form-group">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="form-control"
+                  name="newsletter-email"
+                  value
+                />
+              </div>
+              <button type="submit" class="andro_btn-custom" name="button">
+                Subscribe
+              </button>
+              <span class="newsletter-popup-trigger" data-dismiss="modal"
+                >No Thanks</span
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <aside class="andro_aside andro_aside-right">
+      <div class="sidebar">
+        <div class="sidebar-widget widget-categories-icons">
+          <h5 class="widget-title">Popular Categories</h5>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="andro_icon-block text-center has-link">
+                <a href="#">
+                  <i class="flaticon-diet"></i>
+                  <h5>Fishing</h5>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="andro_icon-block text-center has-link">
+                <a href="#">
+                  <i class="flaticon-groceries"></i>
+                  <h5>Competitions</h5>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="andro_icon-block text-center has-link">
+                <a href="#">
+                  <i class="flaticon-supplements"></i>
+                  <h5>Swimbaits</h5>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="andro_icon-block text-center has-link">
+                <a href="#">
+                  <i class="flaticon-cleaning-spray"></i>
+                  <h5>Fishing Reels</h5>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="andro_icon-block text-center has-link">
+                <a href="#">
+                  <i class="flaticon-baby"></i>
+                  <h5>Fishing Rods</h5>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="andro_icon-block text-center has-link">
+                <a href="#">
+                  <i class="flaticon-olive-oil"></i>
+                  <h5>Gears</h5>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <script
+        <div class="sidebar-widget">
+          <h5 class="widget-title">Popular Tags</h5>
+          <div class="tagcloud">
+            <a href="#">Fishing</a>
+            <a href="#">Fishing</a>
+            <a href="#">Competitions</a>
+            <a href="#">Modern Design</a>
+            <a href="#">Fishing Tool</a>
+            <a href="#">Gears</a>
+            <a href="#">Outfits</a>
+            <a href="#">Swimbaits</a>
+            <a href="#">Rod & Reel Combos</a>
+            <a href="#">Uncategorized</a>
+            <a href="#">Baitrunner Fishing Reel</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <app-root></app-root>
+
+    <script
       src="././assets/js/plugins/jquery-3.4.1.min.js"
       type="1863ce1e9fc8822a77af08e6-text/javascript"
     ></script>
@@ -92,5 +250,22 @@
       data-cf-settings="1863ce1e9fc8822a77af08e6-|49"
       defer
     ></script>
-</body>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true, // Animation happens only once when the element is in view
+      });
+    </script>
+  </body>
 </html>

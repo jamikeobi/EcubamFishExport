@@ -1,0 +1,50 @@
+#carouselExampleInterval img {
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    /* Adjust the height as needed */
+    max-height: 400px; /* Example height */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for hover effect */
+  }
+
+  
+  #carouselExampleInterval .carousel-item img:hover {
+    transform: scale(1.1);
+}
+
+ /* Custom CSS for previous and next buttons */
+ .carousel-control-prev,
+ .carousel-control-next {
+   font-size: 0; /* Hide the text */
+   color: brown; /* Change the color of the buttons to brown */
+   width: 3rem; /* Set a fixed width for the buttons */
+   height: 3rem; /* Set a fixed height for the buttons */
+   background-color: transparent; /* Set the background color to transparent */
+   border: none; /* Remove the default border */
+ }
+
+ /* Custom CSS for the previous icon */
+ .carousel-control-prev-icon {
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(0,0,0,.55)' viewBox='0 0 16 16'%3e%3cpath d='M8.354 1.646l-6 6a.5.5 0 0 0 0 .708l6 6a.5.5 0 0 0 .793-.607L3.707 8l5.646-5.646a.5.5 0 0 0-.793-.708z'/%3e%3c/svg%3e");
+   /* Set the background image for the previous icon */
+   background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+   background-size: contain; /* Make sure the background image fits within the button */
+   width: 2rem; /* Set the width of the icon */
+   height: 2rem; /* Set the height of the icon */
+ }
+
+ /* Custom CSS for the next icon */
+ .carousel-control-next-icon {
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(0,0,0,.55)' viewBox='0 0 16 16'%3e%3cpath d='M7.646 1.646l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.793-.607L11.293 8 7.646 4.354a.5.5 0 0 1 .708-.708z'/%3e%3c/svg%3e");
+   /* Set the background image for the next icon */
+   background-repeat: no-repeat; /* Ensure the background image doesn't repeat */
+   background-size: contain; /* Make sure the background image fits within the button */
+   width: 2rem; /* Set the width of the icon */
+   height: 2rem; /* Set the height of the icon */
+ }
+
+ .andro_product-buttons light{
+    background-color: darkslategray;
+ }
+
+ 

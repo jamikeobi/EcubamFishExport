@@ -1,0 +1,32 @@
+.h3-tag{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem; /* Set initial font size for h3 tag */
+}
+
+
+
+/* Media queries for responsive font size */
+@media only screen and (max-width: 768px) {
+    .h3-tag {
+        font-size: 1.2rem; /* Decrease font size for smaller screens */
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .h3-tag {
+        font-size: 1.4rem; /* Adjust font size for medium screens */
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .h3-tag {
+        font-size: 1.6rem; /* Adjust font size for larger screens */
+    }
+}
+
+/* Styles to prevent phone numbers from breaking */
+.andro_header-controls-inner li {
+    white-space: nowrap; /* Prevent line breaks */
+}

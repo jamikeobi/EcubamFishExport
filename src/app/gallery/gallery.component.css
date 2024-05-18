@@ -1,0 +1,44 @@
+/* your-component.component.css or styles.css */
+
+/* Style for the pagination container */
+.pagination-controls .ngx-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Style for individual page buttons */
+  .pagination-controls .ngx-pagination li {
+    list-style-type: none;
+    margin: 0 5px;
+  }
+  
+  /* Style for the page links */
+  .pagination-controls .ngx-pagination li a {
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #007bff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Style for the active page */
+  .pagination-controls .ngx-pagination li.active a {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Style for disabled buttons */
+  .pagination-controls .ngx-pagination li.disabled a {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #e9ecef;
+  }
+  
+  /* Add hover effect */
+  .pagination-controls .ngx-pagination li a:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  

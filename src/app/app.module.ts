@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { CartComponent } from './cart/cart.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ImageHeaderDirective } from './customDirective/image-header.directive';
 
 @NgModule({
   declarations: [
@@ -31,12 +35,16 @@ import { GalleryComponent } from './gallery/gallery.component';
     ContactComponent,
     LoginComponent,
     RegisterComponent,
-    GalleryComponent
+    GalleryComponent,
+    CartComponent,
+    ProductDetailsComponent,
+    ImageHeaderDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

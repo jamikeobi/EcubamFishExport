@@ -183,7 +183,7 @@
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: #006B71;
+    background-color: darkslategrey;
     border-radius: 100%;
 
     -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
@@ -595,7 +595,7 @@ p {
 }
 
 a {
-    color: #006B71;
+    color: darkslategray;
     text-decoration: none;
     -webkit-transition: .3s;
     -o-transition: .3s;
@@ -604,7 +604,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #2bc1b5;
+    color: darkslategray;
     text-decoration: none;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -662,7 +662,7 @@ ol li {
     -o-transition: .3s;
     transition: .3s;
     margin-right: 10px;
-    color: #006B71;
+    color: brown;
 }
 
 .small,
@@ -675,7 +675,7 @@ blockquote {
     position: relative;
     padding: 30px;
     margin: 20px 0;
-    border-left: 3px solid #006C75;
+    border-left: 3px solid brown;
     font-size: 18px;
     font-family: "Montserrat", sans-serif;
 }
@@ -791,7 +791,7 @@ blockquote p {
     left: 0;
     width: 100px;
     height: 3px;
-    background-color: #006B71;
+    background-color: brown;
 }
 
 .section-title.flex-title {
@@ -902,7 +902,7 @@ textarea {
 
 .custom-radio .custom-control-input:checked~.custom-control-label::before,
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #006C75;
+    background-color: brown;
 }
 
 .custom-control label {
@@ -918,7 +918,7 @@ textarea {
 }
 
 .btn-link:hover {
-    color: #2bc1b5;
+    color: brown;
 }
 
 .andro_btn-custom {
@@ -928,7 +928,7 @@ textarea {
     white-space: nowrap;
     vertical-align: middle;
     position: relative;
-    background-color: #006B71;
+    background-color: brown;
     border: 0;
     color: #fff;
     font-size: 14px;
@@ -946,22 +946,22 @@ textarea {
 .andro_btn-custom:hover,
 .andro_btn-custom:focus {
     color: #fff;
-    background-color: #2bc1b5;
+    background-color: brown;
     outline: none;
 }
 
 .andro_btn-custom.primary {
-    background-color: #006B71;
+    background-color: brown;
 }
 
 .andro_btn-custom.primary:hover,
 .andro_btn-custom.primary:focus {
-    background-color: #2bc1b5;
+    background-color: darkslategray;
 }
 
 .andro_btn-custom.light {
     background-color: #fff;
-    color: #006B71;
+    color: darkslategray;
 }
 
 .andro_btn-custom.light:hover,
@@ -1023,7 +1023,7 @@ textarea {
 1.5. Colors & Badges
 ====================*/
 .custom-primary {
-    color: #006C75;
+    color: darkslategray;
 }
 
 .custom-secondary {
@@ -1031,102 +1031,102 @@ textarea {
 }
 
 .twitter {
-    background-color: rgb(44, 170, 225) !important;
+    background-color: brown !important;
     color: #fff;
 }
 
 .twitter:hover {
-    background-color: #2caae1;
+    background-color: darkslategray;
     color: #fff;
 }
 
 .facebook {
-    background-color: rgb(59, 87, 157) !important;
+    background-color: brown !important;
     color: #fff;
 }
 
 .facebook:hover {
-    background-color: #3b579d;
+    background-color: darkslategray;
     color: #fff;
 }
 
 .google {
-    background-color: rgb(220, 74, 56) !important;
+    background-color: brown !important;
     color: #fff;
 }
 
 .google:hover {
-    background-color: #dc4a38;
+    background-color: darkslategray;
     color: #fff;
 }
 
 .linkedin {
-    background-color: rgb(1, 119, 181) !important;
+    background-color: brown !important;
     color: #fff;
 }
 
 .linkedin:hover {
-    background-color: #0177b5;
+    background-color: darkslategray;
     color: #fff;
 }
 
 .pinterest {
-    background-color: rgb(204, 33, 39) !important;
+    background-color: brown !important;
     color: #fff;
 }
 
 .pinterest:hover {
-    background-color: #cc2127;
+    background-color: darkslategray;
     color: #fff;
 }
 
 .youtube {
-    background-color: rgb(229, 45, 39);
+    background-color: brown;
     color: #fff;
 }
 
 .youtube:hover {
-    background-color: #e52d27;
+    background-color: darkslategray;
     color: #fff;
 }
 
 .github {
-    background-color: rgb(51, 51, 51) !important;
+    background-color: brown !important;
     color: #fff;
 }
 
 .github:hover {
-    background-color: #333333 !important;
+    background-color: darkslategray !important;
     color: #fff;
 }
 
 .behance {
-    background-color: rgb(23, 105, 255) !important;
+    background-color: brown !important;
     color: #fff;
 }
 
 .behance:hover {
-    background-color: #1769ff;
+    background-color: darkslategray;
     color: #fff;
 }
 
 .dribbble {
-    background-color: rgb(234, 76, 137) !important;
+    background-color: brown!important;
     color: #fff;
 }
 
 .dribbble:hover {
-    background-color: #ea4c89;
+    background-color: darkslategray;
     color: #fff;
 }
 
 .reddit {
-    background-color: rgb(255, 69, 0) !important;
+    background-color: brown !important;
     color: #fff;
 }
 
 .reddit:hover {
-    background-color: #ff4500;
+    background-color: darkslategray;
     color: #fff;
 }
 
@@ -1135,7 +1135,7 @@ textarea {
 }
 
 .primary-bg {
-    background-color: #006B71;
+    background-color: darkslategray;
 }
 
 .secondary-bg {
@@ -1288,7 +1288,7 @@ table img {
 }
 
 .nav-link.active {
-    background-color: #006C75;
+    background-color: brown;
     color: #fff;
 }
 
@@ -1346,7 +1346,7 @@ table img {
 }
 
 .andro_header-top {
-    background-color: #00BFFF;
+    background-color: darkslategray;
     padding: 0;
 }
 
@@ -1377,7 +1377,7 @@ table img {
 
 .andro_header-top-sm li a:hover,
 .andro_header-top-links a:hover {
-    color: #006B71;
+    color: brown;
 }
 
 .andro_header-top-links a {
@@ -1465,11 +1465,11 @@ table img {
 }
 
 .andro_header-controls-inner li.andro_header-cart .andro_header-cart-content span+span {
-    color: #006B71;
+    color: darkslategray;
 }
 
 .andro_header-bottom {
-    background-color: #00BFFF;
+    background-color: darkslategray;
 }
 
 .andro_header-bottom-inner {
@@ -1507,7 +1507,7 @@ table img {
 
 .andro_header-bottom-inner>.navbar-nav>.menu-item>a:hover,
 .andro_header-middle .navbar>.navbar-nav>.menu-item>a:hover {
-    color: #006B71;
+    color: brown;
 }
 
 .andro_header-bottom-inner>.navbar-nav>.menu-item:first-child>a,
@@ -1798,7 +1798,7 @@ table img {
 
 .navbar-nav .mega-menu-item a:hover {
     background-color: transparent;
-    color: #006B71;
+    color: darkslategray;
 }
 
 .navbar-nav .mega-menu-item .andro_btn-custom {
@@ -1810,7 +1810,7 @@ table img {
 
 .navbar-nav .mega-menu-item .andro_btn-custom:hover {
     color: #fff;
-    background-color: #2bc1b5;
+    background-color: brown;
 }
 
 .navbar-nav .mega-menu-item a.coming-soon {
@@ -1845,7 +1845,7 @@ table img {
     width: 65px;
     align-items: center;
     justify-content: center;
-    background-color: #006B71;
+    background-color: darkslategray;
     transition: .3s;
 }
 
@@ -1854,7 +1854,7 @@ table img {
 }
 
 .aside-toggler.desktop-toggler:hover {
-    background-color: #2bc1b5;
+    background-color: brown;
 }
 
 .aside-toggler span {
@@ -1963,7 +1963,7 @@ table img {
 
 .andro_aside ul .menu-item a:hover,
 .andro_aside ul .menu-item a.active {
-    color: #006B71;
+    color: brown;
 }
 
 .andro_aside ul .menu-item.menu-item-has-children>a::after {
@@ -2065,7 +2065,7 @@ table img {
 }
 
 .andro_header.header-3 .andro_category-mm .andro_category-mm-header:hover {
-    background-color: #2bc1b5;
+    background-color: darkslategray;
 }
 
 .andro_header.header-3 .andro_category-mm .andro_category-mm-header h6 {
@@ -2154,7 +2154,7 @@ table img {
 }
 
 .andro_footer-middle a:hover {
-    color: #006B71;
+    color: brown;
 }
 
 .andro_footer-middle a.andro_btn-custom,
@@ -2181,7 +2181,7 @@ table img {
 }
 
 .andro_footer-bottom ul li a:hover {
-    color: #006B71;
+    color: darkslategray;
 }
 
 .andro_footer-bottom .andro_footer-copyright {
@@ -2214,7 +2214,7 @@ table img {
 }
 
 .andro_footer-bottom .andro_footer-copyright>a:hover {
-    color: #006B71;
+    color: darkslategray;
 }
 
 .andro_footer-bottom .andro_footer-copyright>a i {
@@ -2239,7 +2239,7 @@ table img {
 }
 
 .andro_footer-bottom .andro_footer-copyright>a:hover i {
-    background-color: #006B71;
+    background-color: darkslategray;
     color: #fff;
 }
 
@@ -2296,7 +2296,7 @@ table img {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
-    color: #006B71;
+    color: brown;
     padding-right: 10px;
 }
 
@@ -2541,7 +2541,7 @@ table img {
     background-color: rgba(80, 189, 77, .25);
     display: inline-block;
     padding: 5px 8px;
-    color: #006B71;
+    color: darkslategray;
     font-size: 13px;
     line-height: 1.7;
     border-radius: 8px;
@@ -2550,7 +2550,7 @@ table img {
 }
 
 .andro_post .andro_post-categories a:hover {
-    background-color: #006B71;
+    background-color: brown;
     color: #fff;
 }
 
@@ -2573,7 +2573,7 @@ table img {
 
 .andro_post .andro_post-body h5 a:hover,
 .andro_post .andro_post-body .andro_post-desc>span a:hover {
-    color: #2bc1b5;
+    color: brown;
 }
 
 .andro_post .andro_post-body .andro_post-desc>span {
@@ -2837,7 +2837,7 @@ table img {
     left: 0;
     width: 100px;
     height: 3px;
-    background-color: #006B71;
+    background-color: brown;
 }
 
 .sidebar-widget ul.sidebar-widget-list {
@@ -2869,7 +2869,7 @@ table img {
 }
 
 .sidebar-widget ul.sidebar-widget-list li a:hover {
-    color: #006B71;
+    color: brown;
 }
 
 .widget-about-author {
@@ -2928,7 +2928,7 @@ table img {
 }
 
 .widget-about-author .andro_sm li a:hover {
-    background-color: #00BFFF;
+    background-color: brown;
     color: #fff;
 }
 
@@ -2959,7 +2959,7 @@ table img {
 
 .widget-recent-posts .post h6 a:hover,
 .widget-recent-posts .post span a:hover {
-    color: #006B71;
+    color: darkslategray;
 }
 
 .widget-recent-posts .post span {
@@ -3078,7 +3078,7 @@ table img {
 }
 
 .andro_product .andro_product-body .andro_product-title a:hover {
-    color: #2bc1b5;
+    color: darkslategray;
 }
 
 .andro_product .andro_badge-featured {
@@ -3150,7 +3150,7 @@ table img {
 .andro_product-price span+span {
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
-    color: #006B71;
+    color: darkslategray;
     font-weight: 700;
     text-decoration: line-through;
 }
@@ -3336,13 +3336,13 @@ table img {
 .irs--flat .irs-single,
 .irs--flat .irs-bar,
 .irs--flat .irs-handle>i:first-child {
-    background-color: #00BFFF;
+    background-color: darkslategray;
 }
 
 .irs--flat .irs-from:before,
 .irs--flat .irs-to:before,
 .irs--flat .irs-single:before {
-    border-top-color: #00BFFF;
+    border-top-color: darkslategrey;
 }
 
 .irs--flat .irs-handle.state_hover>i:first-child,
@@ -3539,7 +3539,7 @@ table img {
 }
 
 .andro_product-meta li a:hover {
-    color: #006B71;
+    color: darkslategray;
 }
 
 .andro_product-single-thumb,
@@ -3582,7 +3582,7 @@ td.remove {
 }
 
 .andro_cart-product-wrapper h6 a:hover {
-    color: #006B71;
+    color: darkslategray;
 }
 
 .andro_cart-product-wrapper p {
@@ -3683,7 +3683,7 @@ td.remove {
 }
 
 .andro_category-mm-header {
-    background-color: #006B71;
+    background-color: darkslategray;
     border-radius: 8px 8px 0 0;
     display: flex;
     align-items: center;
@@ -3804,7 +3804,7 @@ td.remove {
 }
 
 .andro_category-mm-body ul li a:hover {
-    color: #006B71;
+    color: darkslategray;
 }
 
 .andro_category-mm-body>ul>li>ul>li {
@@ -3900,7 +3900,7 @@ td.remove {
 }
 
 .andro_flex-menu>ul>li>a:hover {
-    color: #006B71;
+    color: brown;
 }
 
 .andro_flex-menu>ul>li:first-child>a {
@@ -3916,7 +3916,7 @@ td.remove {
 }
 
 .andro_banner .slick-dots li.slick-active button {
-    background-color: #006B71;
+    background-color: brown;
 }
 
 
@@ -3927,6 +3927,7 @@ td.remove {
 }
 
 .banner-2.andro_banner .andro_banner-slider-inner {
+    border: 2px solid black;
     padding: 120px 15px 150px;
     background-position: center;
     background-repeat: no-repeat;
@@ -3991,7 +3992,6 @@ td.remove {
 .banner-3.andro_banner {
     padding: 60px 0 30px;
     background-color: #fff;
-    background-image: url('../img/banner.png');
     background-position: -110px 0;
 }
 
@@ -4020,7 +4020,7 @@ td.remove {
     z-index: 1;
 }
 .fis-main-slider-sec .slick-dots li.slick-active button{
-    background-color: #00bfff;
+    background-color: brown;
 }
 .fis-main-slider{
     overflow: hidden;
@@ -4060,7 +4060,7 @@ td.remove {
     margin-bottom: 10px;
     font-size: 16px;
     text-transform: uppercase;
-    color: #00bfff;
+    color: darkslategray;
     font-weight: 600;
 }
 .fis-main-slider-sec .fis-thumb-box .thumb-text .title {
@@ -4131,7 +4131,7 @@ td.remove {
 .andro_icon-block .andro_svg-stroke-shape-anim {
     stroke-dasharray: 100 1000;
     stroke-dashoffset: -620;
-    stroke: #006B71;
+    stroke: darkslategray;
     stroke-width: 5px;
     fill: transparent;
     -webkit-transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
@@ -4155,14 +4155,14 @@ td.remove {
 }
 
 .andro_icon-block.icon-block-2 i {
-    color: #006B71;
+    color: darkslategray;
 }
 
 /* 6.7. Call to Actions */
 .andro_cta-notice {
     padding: 40px;
     border-radius: 8px;
-    background-image: url(../img/megamenu/2.jpg);
+    background-image: url(../../assets/img/megamenu/2.jpg);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -4493,7 +4493,7 @@ td.remove {
 }
 
 .andro_testimonials .andro_sm li a:hover {
-    background-color: #00BFFF;
+    background-color: darkslategray;
     color: #fff;
 }
 
@@ -4788,7 +4788,7 @@ td.remove {
 .slick-next:hover,
 .slick-next:focus {
     color: #fff;
-    background-color: #006B71;
+    background-color: darkslategray;
     box-shadow: 4px 3px 24px rgba(80, 189, 77, 0.5);
 }
 
@@ -4871,12 +4871,12 @@ td.remove {
 }
 
 .pagination .page-item.active .page-link {
-    background-color: #006C75;
+    background-color: darkslategray;
 }
 
 .pagination .page-item .page-link:hover,
 .pagination .page-item .page-link:focus {
-    color: #006C75;
+    color: brown;
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -4990,7 +4990,7 @@ td.remove {
 }
 
 .accordion .card-header[aria-expanded="true"] i {
-    color: #006C75;
+    color: darkslategray;
 }
 
 .accordion .card {
@@ -5144,7 +5144,7 @@ td.remove {
     }
 
     .banner-3.andro_banner .andro_arrows .slick-arrow:hover {
-        background-color: #006B71;
+        background-color: brown;
     }
 
     .banner-2.andro_banner .andro_banner-slider-inner {

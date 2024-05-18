@@ -12,15 +12,18 @@ export class SearchComponent {
   searchTerm: string = '';
   fishData$!: Observable<any[]>;
   fish$!: Observable<any[]>;
+  galleryData$!: Observable<any[]>;
 
   constructor(private fishService: FishService, private LagosFishService: LagosFishService) { }
 
   ngOnInit(): void {
     this.fishData$ = this.fishService.getFishData();
     this.fish$ = this.LagosFishService.getFishData();
+    this.galleryData$ = this.fishService.getGalleryData();
   }
 
   onSearch(): void {
+    this.fishService.setSearchTerm(this.searchTerm);
     this.fishService.setSearchTerm(this.searchTerm);
     this.LagosFishService.setSearchTerm(this.searchTerm);
   }

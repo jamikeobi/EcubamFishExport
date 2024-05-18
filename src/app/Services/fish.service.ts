@@ -35,6 +35,32 @@ export class FishService {
     { code: '026', commonName: 'Flame Tetra', scientificName: 'Hyphessobrycon flammeus', size: '4 inches', backpack: 6}
   ];
 
+  private galleryData = [
+    {id: 1, name: "Fishing Reels", description: "Fishing Reel Description", stars: 4, price: 20, discountPrice: 30, imageURL: "../../assets/img/fishLogo.jpg"},
+    {id: 2, name: "Fishing Rods", description: "Fishing Rods Description", stars: 3, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/4.png"},
+    {id: 3, name: "Tools", description: "Tools Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/5.png"},
+    {id: 4, name: "Baitrunner Fishing Reel", description: "Baitrunner Fishing Reel Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/14.png"},
+    {id: 5, name: "Celta Fishing Lures", description: "Celta Fishing Lures Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/8.png"},
+    {id: 7, name: "Overhead Fishing Reel", description: "Overhead Fishing Reel Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/7.png"},
+    {id: 8, name: "Fishing Reels", description: "Fishing Reel Description", stars: 4, price: 20, discountPrice: 30, imageURL: "../../assets/img/products/2.png"},
+    {id: 9, name: "Fishing Rods", description: "Fishing Rods Description", stars: 3, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/4.png"},
+    {id: 10, name: "Tools", description: "Tools Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/5.png"},
+    {id: 11, name: "Shawa", description: "Baitrunner Fishing Reel Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/14.png"},
+    {id: 12, name: "Celta Fishing Lures", description: "Celta Fishing Lures Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/8.png"},
+    {id: 13, name: "Overhead Fishing Reel", description: "Overhead Fishing Reel Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/7.png"},
+    {id: 14, name: "Fishing Reels", description: "Fishing Reel Description", stars: 4, price: 20, discountPrice: 30, imageURL: "../../assets/img/products/2.png"},
+    {id: 15, name: "Fishing Rods", description: "Fishing Rods Description", stars: 3, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/4.png"},
+    {id: 16, name: "Tools", description: "Tools Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/5.png"},
+    {id: 17, name: "Baitrunner Fishing Reel", description: "Baitrunner Fishing Reel Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/14.png"},
+    {id: 18, name: "Cella Fishing Lures", description: "Celta Fishing Lures Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/8.png"},
+    {id: 19, name: "Overhead Fishing Reel", description: "Overhead Fishing Reel Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/7.png"},
+    {id: 20, name: "Titus", description: "Fishing Reel Description", stars: 4, price: 20, discountPrice: 30, imageURL: "../../assets/img/products/2.png"},
+    {id: 21, name: "Fishing Rods", description: "Fishing Rods Description", stars: 3, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/4.png"},
+    {id: 22, name: "Tools", description: "Tools Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/5.png"},
+    {id: 23, name: "Baitrunner Fishing Reel", description: "Baitrunner Fishing Reel Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/14.png"},
+    {id: 24, name: "Kpanla", description: "Celta Fishing Lures Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/8.png"},
+    {id: 25, name: "Overhead Fishing Reel", description: "Overhead Fishing Reel Description", stars: 4, price: 19, discountPrice: 29, imageURL: "../../assets/img/products/7.png"},
+  ];
   private searchSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
 
@@ -50,10 +76,22 @@ export class FishService {
         return this.fishData.filter(fish => fish.commonName.toLowerCase().includes(searchTerm));
       })
     );
+  };
+
+  getGalleryData(): Observable<any[]> {
+    return this.searchSubject.pipe(
+      map((searchTerm: string) => {
+        if (!searchTerm) {
+          return this.galleryData;
+        }
+        searchTerm = searchTerm.toLowerCase();
+        return this.galleryData.filter(gallery => gallery.name.toLowerCase().includes(searchTerm));
+      })
+    );
   }
 
-  setSearchTerm(term: string): void {
-    this.searchSubject.next(term);
+  setSearchTerm(searchTerm: string) {
+    this.searchSubject.next(searchTerm);
   }
 
 
