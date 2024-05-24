@@ -15,5 +15,8 @@ export class HomeComponent {
         dots: true,
         arrows: true
     });
+
   }
+
+  
 }

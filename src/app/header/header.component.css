@@ -30,3 +30,68 @@
 .andro_header-controls-inner li {
     white-space: nowrap; /* Prevent line breaks */
 }
+
+
+/* Styles for the hamburger menu */
+.hamburger-menu {
+    display: none; /* Hide by default for desktop */
+  }
+  
+  .hamburger-icon {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out; /* Add smooth animation for icon */
+  }
+  
+  /* Media query for showing the hamburger menu on mobile */
+  @media screen and (max-width: 768px) {
+    .hamburger-menu {
+      display: block; /* Show for mobile */
+    }
+  
+    .navbar-nav {
+      display: none; /* Hide the navigation links by default for mobile */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      z-index: 999; /* Ensure it's above other content */
+    }
+  
+    .navbar-nav.active {
+      display: flex; /* Show the navigation links when hamburger menu is active */
+    }
+  
+    .navbar-nav.active li {
+      margin-bottom: 10px; /* Add spacing between menu items */
+    }
+  
+    .navbar-nav.active li a {
+      color: #333; /* Change link color when active */
+    }
+  
+    .hamburger-icon.active span:first-child {
+      transform: translateY(8px) rotate(45deg); /* Rotate first span to form an X shape */
+    }
+  
+    .hamburger-icon.active span:nth-child(2) {
+      opacity: 0; /* Hide the middle span */
+    }
+  
+    .hamburger-icon.active span:last-child {
+      transform: translateY(-8px) rotate(-45deg); /* Rotate last span to form an X shape */
+    }
+  }
+  
