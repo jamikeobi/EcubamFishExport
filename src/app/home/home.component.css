@@ -1,12 +1,11 @@
 #carouselExampleInterval img {
     max-width: 400px;
-    height: auto;
+    height: 300px;
     margin: auto;
     /* Adjust the height as needed */
     max-height: 400px; /* Example height */
     transition: transform 0.5s ease-in-out; /* Smooth transition for hover effect */
   }
-
   
   #carouselExampleInterval .carousel-item img:hover {
     transform: scale(1.1);
@@ -48,3 +47,76 @@
  }
 
  
+
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.slide-item {
+  position: relative;
+  width: fit-content; /* Adjust based on your layout */
+  display: inline-block;
+}
+
+.slide-item img {
+  display: block;
+  width: 100%; /* Adjust based on your layout */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 40%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset the top and left positioning */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 5px; /* Optional: round corners */
+  text-align: center;
+  font-size: 1.5em; /* Adjust font size as needed */
+  z-index: 10; /* Ensure text is above the image */
+}
+
+
+/*First Slider Styling Start */
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: whitesmoke;
+}
+
+.carousel-item img {
+  height: 500px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+/* Image DIV  */
+.andro_cta img{
+  height: 500px;
+}
+.full-width-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+.andro_product-title a{
+  color: black !important;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bolder;
+}

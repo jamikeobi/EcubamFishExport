@@ -3,95 +3,172 @@
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem; /* Set initial font size for h3 tag */
+    display: inline-block;
+      font-size: 1.5rem; /* Initial font size */
+      white-space: nowrap; /* Prevent text wrapping */
 }
 
-
-
-/* Media queries for responsive font size */
-@media only screen and (max-width: 768px) {
-    .h3-tag {
-        font-size: 1.2rem; /* Decrease font size for smaller screens */
-    }
+.header{
+  background-color: brown;
+}
+.andro_header-top-links {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.andro_header-top-links li {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  list-style-type: none;
+  color: white;
+}
+.andro_header-top-links li{
+  display: inline-block;
+  font-size: 1rem; /* Initial font size */
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .h3-tag {
-        font-size: 1.4rem; /* Adjust font size for medium screens */
-    }
+/* Phone Number Top Bar Media query */
+@media (max-width: 768px) {
+  .andro_header-top-links li {
+    font-size: 0.875rem; /* Smaller font size for smaller screens */
+  }
+}
+@media (max-width: 576px) {
+  .andro_header-top-links li{
+    font-size: 0.75rem; /* Even smaller font size for smaller screens */
+  }
+}
+@media (max-width: 510px) {
+  .andro_header-top-links {
+    flex-wrap: wrap; /* Allow items to wrap */
+    white-space: normal; /* Allow text to wrap */
+  }
+  .andro_header-top-links li {
+    flex: 1 1 100%; /* Make each list item take full width */
+    text-align: center; /* Center align text for better appearance */
+  }
+  .andro_header-top-links li span {
+    font-size: 0.85rem; /* Adjust font size */
+  }
 }
 
-@media only screen and (min-width: 1025px) {
-    .h3-tag {
-        font-size: 1.6rem; /* Adjust font size for larger screens */
-    }
+@media (max-width: 400px) {
+  .andro_header-top-links li{
+    font-size: 0.65rem; /* Even smaller font size for very small screens */
+  }
+  .andro_header-top-links li {
+    margin: 5px;
+    padding: 5px;
+  }
 }
+@media (max-width: 320px) {
+  .andro_header-top-links li {
+    font-size: 0.55rem; /* Even smaller font size for very small screens */
+  }
+  .andro_header-top-links li {
+    margin: 2px;
+    padding: 2px;
+  }
+}
+
+/* Head Tag For Ecubams Fish Export Name */
+@media (max-width: 768px) {
+  .h3-tag {
+    font-size: 1.25rem; /* Adjust font size for smaller screens */
+  }
+}
+@media (max-width: 576px) {
+  .h3-tag {
+    font-size: 1rem; /* Adjust font size for even smaller screens */
+  }
+}
+@media (max-width: 510px) {
+  .h3-tag {
+    font-size: 0.9rem; /* Adjust font size and allow wrapping for small screens */
+    white-space: normal; /* Allow text wrapping */
+  }
+}
+@media (max-width: 400px) {
+  .h3-tag {
+    font-size: 0.75rem; /* Smaller font size for very small screens */
+  }
+}
+@media (max-width: 320px) {
+  .h3-tag {
+    font-size: 0.65rem; /* Even smaller font size for very small screens */
+  }
+}
+
 
 /* Styles to prevent phone numbers from breaking */
 .andro_header-controls-inner li {
     white-space: nowrap; /* Prevent line breaks */
 }
 
-
-/* Styles for the hamburger menu */
+/* Basic styling for the navigation and hamburger menu */
 .hamburger-menu {
-    display: none; /* Hide by default for desktop */
-  }
-  
-  .hamburger-icon {
+  /* display: none; */
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #000;
+  transition: all 0.3s;
+}
+
+/* Mobile menu styling */
+@media (max-width: 768px) {
+  .hamburger-menu {
     display: block;
-    cursor: pointer;
   }
-  
-  .hamburger-icon span {
+
+  .navbar-nav {
+    /* display: none; */
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .navbar-nav.active {
+    display: flex;
+  }
+
+  .navbar-nav .menu-item {
+    width: 100%;
+  }
+
+  .navbar-nav .menu-item a {
     display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-    transition: transform 0.3s ease-in-out; /* Add smooth animation for icon */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
   }
-  
-  /* Media query for showing the hamburger menu on mobile */
-  @media screen and (max-width: 768px) {
-    .hamburger-menu {
-      display: block; /* Show for mobile */
-    }
-  
-    .navbar-nav {
-      display: none; /* Hide the navigation links by default for mobile */
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      padding: 20px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      flex-direction: column;
-      z-index: 999; /* Ensure it's above other content */
-    }
-  
-    .navbar-nav.active {
-      display: flex; /* Show the navigation links when hamburger menu is active */
-    }
-  
-    .navbar-nav.active li {
-      margin-bottom: 10px; /* Add spacing between menu items */
-    }
-  
-    .navbar-nav.active li a {
-      color: #333; /* Change link color when active */
-    }
-  
-    .hamburger-icon.active span:first-child {
-      transform: translateY(8px) rotate(45deg); /* Rotate first span to form an X shape */
-    }
-  
-    .hamburger-icon.active span:nth-child(2) {
-      opacity: 0; /* Hide the middle span */
-    }
-  
-    .hamburger-icon.active span:last-child {
-      transform: translateY(-8px) rotate(-45deg); /* Rotate last span to form an X shape */
-    }
+
+  .navbar-nav .sub-menu {
+    display: none;
+    flex-direction: column;
   }
-  
+
+  .navbar-nav .menu-item-has-children.active > .sub-menu {
+    display: flex;
+  }
+}
+
+.andro_header-bottoms{
+  display: none;
+}
+
+/* Navbar icon */
+.navbar-toggler {
+  background-color: brown;
+  border: none;
+}
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}

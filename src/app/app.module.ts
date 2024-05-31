@@ -20,6 +20,9 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ImageHeaderDirective } from './customDirective/image-header.directive';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { RefundPolicyComponent } from './refund-policy/refund-policy.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { ImageHeaderDirective } from './customDirective/image-header.directive';
     GalleryComponent,
     CartComponent,
     ProductDetailsComponent,
-    ImageHeaderDirective
+    ImageHeaderDirective,
+    PrivacyPolicyComponent,
+    RefundPolicyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,

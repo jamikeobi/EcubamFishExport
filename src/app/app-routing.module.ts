@@ -10,6 +10,9 @@ import { RegisterComponent } from './register/register.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { RefundPolicyComponent } from './refund-policy/refund-policy.component';
+import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,7 +25,10 @@ const routes: Routes = [
   {path: 'Register', component: RegisterComponent},
   {path: 'Gallery', component: GalleryComponent},
   {path: 'Cart', component: CartComponent},
-  {path: 'ProductDetails', component: ProductDetailsComponent}
+  {path: 'ProductDetails', component: ProductDetailsComponent},
+  {path: 'Privacy', component: PrivacyPolicyComponent},
+  { path: 'Refund', component: RefundPolicyComponent },
+  {path: 'Terms', component: TermsComponent}
 ];
 
 @NgModule({
