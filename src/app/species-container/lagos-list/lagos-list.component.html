@@ -4,47 +4,51 @@
   <app-search></app-search>
 
   <!-- fish-list.component.html -->
-  <table>
-    <thead>
-      <tr>
-        <th colspan="6">
-          <h5>
-            LIVE FRESH Ecubams AfricanFish ExportFISH STOCK LIST LAGOS NIGERIA
-            F.O.B ORIGIN
-          </h5>
-        </th>
-      </tr>
-      <tr>
-        <th colspan="3">
-          <h5>USA Agent: Jamike Obikwelu</h5>
-        </th>
-        <th colspan="2">
-          Phone Contact: +234 816 440 5253<br />
-          E-mail: jamikeobikwelu@gmail.com
-        </th>
-      </tr>
-      <tr>
-        <th rowspan="3">Code</th>
-        <th rowspan="3">Name(English)</th>
-        <th rowspan="3">Names(Scientific)</th>
-        <th rowspan="3" colspan="4">TWO BAGS PER BOX QTY PER BAG</th>
-      </tr>
-    </thead>
-    <tbody>
-      <ng-container *ngIf="fishData$ | async as fishData; else noResults">
-        <tr *ngFor="let fish of fishData">
-          <td>{{ fish.code }}</td>
-          <td>{{ fish.commonName }}</td>
-          <td>{{ fish.scientificName }}</td>
-          <td>{{ fish.size }}</td>
-          <td>{{ fish.backpack }}</td>
-        </tr>
-      </ng-container>
-      <ng-template #noResults>
-        <tr>
-          <td colspan="5">No results found</td>
-        </tr>
-      </ng-template>
-    </tbody>
-  </table>
-</main>
+  <main class="container">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th colspan="6">
+              <h5>
+                LIVE FRESH Ecubams AfricanFish ExportFISH STOCK LIST LAGOS NIGERIA
+                F.O.B ORIGIN
+              </h5>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="3">
+              <h5>USA Agent: Jamike Obikwelu</h5>
+            </th>
+            <th colspan="2">
+              Phone Contact: +234 816 440 5253<br />
+              E-mail: jamikeobikwelu@gmail.com
+            </th>
+          </tr>
+          <tr>
+            <th rowspan="3">Code</th>
+            <th rowspan="3">Name(English)</th>
+            <th rowspan="3">Names(Scientific)</th>
+            <th rowspan="3" colspan="4">TWO BAGS PER BOX QTY PER BAG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngIf="fishData$ | async as fishData; else noResults">
+            <tr *ngFor="let fish of fishData">
+              <td>{{ fish.code }}</td>
+              <td>{{ fish.commonName }}</td>
+              <td>{{ fish.scientificName }}</td>
+              <td>{{ fish.size }}</td>
+              <td>{{ fish.backpack }}</td>
+            </tr>
+          </ng-container>
+          <ng-template #noResults>
+            <tr>
+              <td colspan="5">No results found</td>
+            </tr>
+          </ng-template>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  

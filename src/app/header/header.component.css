@@ -8,8 +8,23 @@
       white-space: nowrap; /* Prevent text wrapping */
 }
 
-.header{
-  background-color: brown;
+/* .andro_header-top{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+}
+.header {
+  margin-bottom: 20px;
+  position: fixed;
+  top: 40px;
+  background-color: white;
+  width: 100%;
+  z-index: 1000;
+} */
+
+.content {
+  padding-top: 100px; /* Adjust this based on the height of your header */
 }
 .andro_header-top-links {
   display: flex;
@@ -34,13 +49,22 @@
   .andro_header-top-links li {
     font-size: 0.875rem; /* Smaller font size for smaller screens */
   }
+  .andro_header-top{
+    font-size: 0.875rem;
+  }
 }
 @media (max-width: 576px) {
   .andro_header-top-links li{
     font-size: 0.75rem; /* Even smaller font size for smaller screens */
   }
+  .andro_header-top{
+    font-size: 0.75rem;
+  }
 }
 @media (max-width: 510px) {
+  .andro_header-top{
+    font-size: 0.65rem;
+  }
   .andro_header-top-links {
     flex-wrap: wrap; /* Allow items to wrap */
     white-space: normal; /* Allow text to wrap */
@@ -55,6 +79,9 @@
 }
 
 @media (max-width: 400px) {
+  .andro_header-top{
+    font-size: 0.55rem;
+  }
   .andro_header-top-links li{
     font-size: 0.65rem; /* Even smaller font size for very small screens */
   }
@@ -64,6 +91,9 @@
   }
 }
 @media (max-width: 320px) {
+  .andro_header-top{
+    font-size: 0.45rem;
+  }
   .andro_header-top-links li {
     font-size: 0.55rem; /* Even smaller font size for very small screens */
   }
@@ -171,4 +201,9 @@
 }
 .navbar-toggler-icon {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.dropdown-menu a:hover{
+  background-color: brown;
+  color: whitesmoke;
 }
