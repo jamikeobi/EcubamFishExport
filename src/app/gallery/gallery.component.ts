@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Observable , of} from 'rxjs';
+import { Observable } from 'rxjs';
 import { FishService } from '../Services/fish.service';
-
 
 @Component({
   selector: 'app-gallery',
@@ -9,7 +8,8 @@ import { FishService } from '../Services/fish.service';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent {
-  galleryData$!: Observable<any[]>; // Observable for gallery data
+
+ galleryData$!: Observable<any[]>; // Observable for gallery data
   items: any[] = []; // Array to hold items for pagination
   p: number = 1;  // Current page number
   itemsPerPage: number = 10;  // Number of items per page
@@ -26,4 +26,5 @@ export class GalleryComponent {
   filterItems(searchTerm: string): void {
     this.fishService.setSearchTerm(searchTerm);
   }
+
 }

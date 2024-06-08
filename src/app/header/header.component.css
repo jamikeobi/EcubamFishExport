@@ -8,6 +8,9 @@
       white-space: nowrap; /* Prevent text wrapping */
 }
 
+.andro_header a{
+  text-decoration: none;
+}
 /* .andro_header-top{
   position: fixed;
   top: 0px;
@@ -32,7 +35,7 @@
   white-space: nowrap;
 }
 .andro_header-top-links li {
-  border: 2px solid black;
+  border: 2px solid brown;
   margin: 10px;
   padding: 10px;
   cursor: pointer;
@@ -205,5 +208,5 @@
 
 .dropdown-menu a:hover{
   background-color: brown;
-  color: whitesmoke;
+  color: whitesmoke !important;
 }

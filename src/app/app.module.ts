@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactService } from './contact.service';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,13 +19,14 @@ import { SearchComponent } from './species-container/search/search.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ImageHeaderDirective } from './customDirective/image-header.directive';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { RefundPolicyComponent } from './refund-policy/refund-policy.component';
 import { TermsComponent } from './terms/terms.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { QuotePageComponent } from './gallery/quote-page/quote-page.component';
 
 @NgModule({
   declarations: [
@@ -38,21 +42,23 @@ import { TermsComponent } from './terms/terms.component';
     ContactComponent,
     LoginComponent,
     RegisterComponent,
-    GalleryComponent,
     CartComponent,
     ProductDetailsComponent,
     ImageHeaderDirective,
     PrivacyPolicyComponent,
     RefundPolicyComponent,
-    TermsComponent
+    TermsComponent,
+    GalleryComponent,
+    QuotePageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

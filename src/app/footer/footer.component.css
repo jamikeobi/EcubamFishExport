@@ -4,3 +4,6 @@
     font-style: normal;
     font-size: 1.5rem; /* Set initial font size for h3 tag */
 }
+a{
+    text-decoration: none;
+}

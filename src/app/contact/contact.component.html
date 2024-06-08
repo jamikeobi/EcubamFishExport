@@ -229,46 +229,152 @@
       </div>
       <div class="col-lg-7">
         <div class="section-title">
-            <h4 class="title">Contact Us</h4>
+          <h4 class="title">Contact Us</h4>
         </div>
-        <form method="post" #contactForm="ngForm">
-            <div class="row">
-                <div class="form-group col-lg-6">
-                    <input type="text" placeholder="First Name" class="form-control" name="fname" ngModel required>
-                </div>
-                <div class="form-group col-lg-6">
-                    <input type="text" placeholder="Last Name" class="form-control" name="lname" ngModel required>
-                </div>
-                <div class="form-group col-lg-12">
-                    <input type="email" placeholder="Email Address" class="form-control" name="email" ngModel required>
-                </div>
-                <div class="form-group col-lg-12">
-                    <label>
-                        <input type="radio" name="contactType" value="Company" ngModel> Company
-                    </label>
-                    <label>
-                        <input type="radio" name="contactType" value="Individual" ngModel required> Individual
-                    </label>
-                </div>
-                <div class="form-group col-lg-12" *ngIf="contactForm.value.contactType === 'Company'">
-                    <input type="text" placeholder="Company Name" class="form-control" name="companyName" ngModel>
-                </div>
-                <div class="form-group col-lg-12">
-                    <select name="country" class="form-control" ngModel required>
-                        <option value="" disabled selected>Select your country</option>
-                        <option value="Afghanistan">Afghanistan</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Algeria">Algeria</option>
-                        <!-- Add more countries here -->
-                    </select>
-                </div>
-                <div class="form-group col-lg-12">
-                    <textarea name="message" class="form-control" placeholder="Type your message" rows="8" ngModel required></textarea>
-                </div>
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+          <div class="row">
+            <p style="color: red;" *ngIf="submitted && contactForm.invalid">*Fill out all fields to successfully send your message.</p>
+            <div class="form-group col-lg-6" [ngClass]="{'has-error': fname.touched && !fname.valid}">
+              <input type="text" placeholder="First Name" class="form-control" name="fname" ngModel required #fname="ngModel">
+              <div *ngIf="fname.touched && !fname.valid" class="error">First Name is required.</div>
             </div>
-            <button type="submit" class="andro_btn-custom primary" name="button" [disabled]="contactForm.invalid">Send Message</button>
+            <div class="form-group col-lg-6" [ngClass]="{'has-error': lname.touched && !lname.valid}">
+              <input type="text" placeholder="Last Name" class="form-control" name="lname" ngModel required #lname="ngModel">
+              <div *ngIf="lname.touched && !lname.valid" class="error">Last Name is required.</div>
+            </div>
+            <div class="form-group col-lg-12" [ngClass]="{'has-error': email.touched && !email.valid}">
+              <input type="email" placeholder="Email Address" class="form-control" name="email" ngModel required #email="ngModel">
+              <div *ngIf="email.touched && !email.valid" class="error">Email is required.</div>
+            </div>
+            <div class="form-group col-lg-12" [ngClass]="{'has-error': contactType.touched && !contactType.valid}">
+              <label class="radio-label">
+                <input type="radio" name="contactType" value="Company" ngModel required #companyradio="ngModel"> Company
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="contactType" value="Personal" ngModel required #contactType="ngModel"> Personal
+              </label>
+              <div *ngIf="contactType.touched && !contactType.valid" class="error">Contact Type is required.</div>
+            </div>
+            <div class="form-group col-lg-12" *ngIf="contactForm.value.contactType === 'Company'" [ngClass]="{'has-error': companys.touched && !companys.valid}">
+              <input type="text" placeholder="Company Name" class="form-control" name="companyName" ngModel #companys="ngModel" required>
+              <div *ngIf="companys.touched && companys.invalid" class="error">Company name is required</div>
+            </div>
+            <div class="form-group col-lg-12" [ngClass]="{'has-error': country.touched && !country.valid}">
+              <select name="country" class="form-control" ngModel required #country="ngModel">
+                <option value="" disabled selected>Select your country</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Belize">Belize</option>
+                <option value="Benin">Benin</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                <option value="Botswana">Botswana</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Cook Islands">Cook Islands</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Dominican Republic">Dominican Republic</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Fiji">Fiji</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Greece">Greece</option>
+                <option value="Guyana">Guyana</option>
+                <option value="Haiti">Haiti</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Iceland">Iceland</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran">Iran</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Japan">Japan</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kiribati">Kiribati</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="Laos">Laos</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Luxembourg">Luxembourg</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Montenegro">Montenegro</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="North Macedonia">North Macedonia</option>
+                <option value="Norway">Norway</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Palau">Palau</option>
+                <option value="Panama">Panama</option>
+                <option value="Papua New Guinea">Papua New Guinea</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Peru">Peru</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Romania">Romania</option>
+                <option value="Russia">Russia</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Korea">South Korea</option>
+                <option value="Spain">Spain</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Turkey">Turkey</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Zambia">Zambia</option>
+              </select>
+              <div *ngIf="country.touched && !country.valid" class="error">Country is required.</div>
+            </div>
+            <div class="form-group col-lg-12" [ngClass]="{'has-error': message.touched && !message.valid}">
+              <textarea name="message" class="form-control" rows="8" placeholder="Fish Name & Quantity" ngModel required #message="ngModel"></textarea>
+              <div *ngIf="message.touched && !message.valid" class="error">Message is required.</div>
+            </div>            
+            <div class="col-lg-12 text-center">
+              <button type="submit" class="btn">Send Message</button>
+            </div>
+          </div>
         </form>
-    </div>
+      </div>
+      
+      
     
     </div>
   </div>

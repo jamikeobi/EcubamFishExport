@@ -16,7 +16,9 @@
             height: auto;
         }
         
-
+a{
+  text-decoration: none;
+}
  /* Custom CSS for previous and next buttons */
  .carousel-control-prev,
  .carousel-control-next {
@@ -88,26 +90,99 @@
 
 
 /*First Slider Styling Start */
-
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-50%);
+.single-image-container {
+  position: relative;
   text-align: center;
+  color: white;
 }
 
-.carousel-caption h5 {
-  font-size: 2rem;
-  font-weight: bold;
+.single-image-container img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
 }
 
-.carousel-caption p {
+.image-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.image-caption h1 {
+  color: white;
+  font-weight: bolder;
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+.image-caption p {
   font-size: 1.2rem;
+  font-weight: bolder;
   color: whitesmoke;
 }
 
-.carousel-item img {
-  height: 500px; /* Adjust height as needed */
-  object-fit: cover;
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .single-image-container img {
+    height: 600px;
+  }
+  .image-caption {
+    padding: 15px;
+  }
+  .image-caption h1 {
+    font-size: 2rem;
+  }
+  .image-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-image-container img {
+    height: 500px;
+  }
+  .image-caption {
+    padding: 10px;
+  }
+  .image-caption h1 {
+    font-size: 1.8rem;
+  }
+  .image-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .single-image-container img {
+    height: 400px;
+  }
+  .image-caption {
+    padding: 8px;
+  }
+  .image-caption h1 {
+    font-size: 1.5rem;
+  }
+  .image-caption p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .single-image-container img {
+    height: 300px;
+  }
+  .image-caption {
+    padding: 5px;
+  }
+  .image-caption h1 {
+    font-size: 1.2rem;
+  }
+  .image-caption p {
+    font-size: 0.7rem;
+  }
 }
 
 /* Image DIV  */

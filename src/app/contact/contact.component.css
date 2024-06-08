@@ -8,3 +8,40 @@ a{
     margin-bottom: 5px;
   }
   
+  .has-error input,
+.has-error select,
+.has-error textarea {
+    border-color: red;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* Button styling */
+
+/* Add this CSS to your stylesheet */
+.btn {
+    background-color: darkslategray;
+    color: white;             /* White text */
+    padding: 10px 20px;       /* Padding for the button */
+    border: none;             /* No border */
+    border-radius: 5px;       /* Rounded corners */
+    font-size: 16px;          /* Font size */
+    cursor: pointer;          /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: brown;
+}
+
+.btn:disabled {
+    background-color: #cccccc; /* Grey color for disabled state */
+    cursor: not-allowed;       /* Not-allowed cursor for disabled state */
+}
+.radio-label {
+    margin-right: 20px;
+  }
+  

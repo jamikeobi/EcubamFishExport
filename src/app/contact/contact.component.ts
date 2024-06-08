@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,27 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  formData: any = {};
+  submitted = false;
+  constructor(private contactService: ContactService) { }
 
-  onSubmit(form: any) {
-    if (form.valid) {
-      this.formData = form.value;
-      console.log('Form Submitted!', this.formData);
-      // Store form data (e.g., in local storage or send it to a server)
-      localStorage.setItem('formData', JSON.stringify(this.formData));
-    } else {
-      console.log('Form is not valid');
-      // You can add more specific validation messages if needed
-    }
-  }
-
-  getStoredData() {
-    const storedData = localStorage.getItem('formData');
-    if (storedData) {
-      this.formData = JSON.parse(storedData);
-      console.log('Retrieved Data:', this.formData);
-    } else {
-      console.log('No stored data found');
+  onSubmit(contactForm: NgForm) {
+    this.submitted = true;
+    if (contactForm.valid) {
+      this.contactService.submitContact(contactForm.value).subscribe(response => {
+        console.log('Contact form submitted successfully', response);
+      }, error => {
+        console.error('Error submitting contact form', error);
+      });
     }
   }
 }
