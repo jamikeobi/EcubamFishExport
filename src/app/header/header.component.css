@@ -35,7 +35,7 @@
   white-space: nowrap;
 }
 .andro_header-top-links li {
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
   margin: 10px;
   padding: 10px;
   cursor: pointer;

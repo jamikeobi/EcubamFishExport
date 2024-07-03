@@ -186,18 +186,17 @@ a{
 }
 
 /* Image DIV  */
-.andro_cta img{
-  height: 500px;
-}
-.full-width-image {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  display: block;
+.andro_cta {
+  height: 500px; /* Set the desired height for the container */
+  width: 100%; /* Ensure the container spans the full width of its parent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-.andro_product-title a{
-  color: black !important;
-  text-decoration: none;
-  font-size: larger;
-  font-weight: bolder;
+.andro_cta video {
+  width: 100%; /* Ensure video takes full width of its container */
+  height: 100%; /* Ensure video takes full height of its container */
+  object-fit: cover; /* Preserve aspect ratio and cover container */
 }
