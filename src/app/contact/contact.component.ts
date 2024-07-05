@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ContactService } from '../contact.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -9,16 +10,30 @@ import { ContactService } from '../contact.service';
 })
 export class ContactComponent {
   submitted = false;
+
+  @ViewChild('contactForm') contactForm!: NgForm;
+  http: HttpClient = inject(HttpClient);
   constructor(private contactService: ContactService) { }
 
   onSubmit(contactForm: NgForm) {
     this.submitted = true;
     if (contactForm.valid) {
-      this.contactService.submitContact(contactForm.value).subscribe(response => {
-        console.log('Contact form submitted successfully', response);
-      }, error => {
-        console.error('Error submitting contact form', error);
-      });
+    const header = new HttpHeaders({'EcubamsHeader':'Contact Form'});
+    const ContactData = {
+      fname: this.contactForm.value.fname,
+      lname: this.contactForm.value.lname,
+      email: this.contactForm.value.email,
+      companyradio: this.contactForm.value.companyradio,
+      contactType: this.contactForm.value.contactType,
+      companys: this.contactForm.value.companys,
+      country: this.contactForm.value.country,
+      message: this.contactForm.value.message
+    };
+    this.http.post<{name: string}>('https://ecubamsfishexport-default-rtdb.firebaseio.com/contactForm.json', ContactData, {headers: header}).subscribe((response) => {
+      console.log(response);
+    this.contactForm.reset();
+    this.submitted = false;
+    });
     }
   }
 }
