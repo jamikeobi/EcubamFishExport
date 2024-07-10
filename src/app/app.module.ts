@@ -27,6 +27,7 @@ import { RefundPolicyComponent } from './refund-policy/refund-policy.component';
 import { TermsComponent } from './terms/terms.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { QuotePageComponent } from './gallery/quote-page/quote-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { QuotePageComponent } from './gallery/quote-page/quote-page.component';
     TermsComponent,
     GalleryComponent,
     QuotePageComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

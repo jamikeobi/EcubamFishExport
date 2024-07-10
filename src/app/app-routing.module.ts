@@ -14,6 +14,7 @@ import { RefundPolicyComponent } from './refund-policy/refund-policy.component';
 import { TermsComponent } from './terms/terms.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { QuotePageComponent } from './gallery/quote-page/quote-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'Refund', component: RefundPolicyComponent },
   {path: 'Terms', component: TermsComponent},
   {path: 'Gallery', component: GalleryComponent},
-  {path: 'Quote', component: QuotePageComponent}
+  {path: 'Quote', component: QuotePageComponent},
+  {path: 'InformationCockpit', component: DashboardComponent}
 ];
 
 @NgModule({

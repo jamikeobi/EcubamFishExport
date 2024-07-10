@@ -1,0 +1,34 @@
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .header {
+    height: 60px; /* Adjust height as per your header */
+    background-color: #333; /* Example background color */
+    color: #fff; /* Example text color */
+    text-align: center;
+    line-height: 60px; /* Center vertically */
+  }
+  
+  .footer {
+    height: 40px; /* Adjust height as per your footer */
+    background-color: #333; /* Example background color */
+    color: #fff; /* Example text color */
+    text-align: center;
+    line-height: 40px; /* Center vertically */
+  }
+  
+  .content {
+    display: flex;
+    flex: 1; /* Take remaining vertical space */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Optional padding for content */
+    margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      flex: 1;
+  }
+  

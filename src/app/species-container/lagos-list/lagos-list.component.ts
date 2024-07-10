@@ -9,6 +9,10 @@ import { LagosFishService } from 'src/app/Services/lagos-fish.service';
 export class LagosListComponent {
   searchText: string = '';
   fishData$!: Observable<any[]>;
+  items: any[] = []; // Array to hold items for pagination
+  // collection: any[];
+  itemsPerPage: number = 20;
+  p: number = 1;
 
   constructor(private LagosFishService: LagosFishService) { }
 

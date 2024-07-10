@@ -1,0 +1,21 @@
+<div class="container">
+
+    <h2>DashBoard</h2>
+    
+      <div class="content">
+        <ul>
+          <li *ngFor="let form of data">
+            <strong>{{ form.fname }}</strong><br>
+            Email: {{ form.lname }}<br>
+            Mobile: {{ form.email }}<br>
+            WhatsApp: {{form.companyradio}}<br>
+            Company: {{form.contactType}}<br>
+            Country: {{form.country}}<br>
+            Fish Name: {{form.message}}<br>
+            Date: {{form.date}}
+            <hr>
+          </li>
+        </ul>
+      </div>
+  
+</div>  
