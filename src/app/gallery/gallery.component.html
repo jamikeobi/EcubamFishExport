@@ -73,7 +73,9 @@
                         <span>Featured</span>
                     </div> -->
                     <div class="andro_product-thumb">
-                        <a href="product-single.html"><img [src]="gallery.imageURL" alt="product" /></a>
+                        <a href="product-single.html">
+                            <video [src]="gallery.imageURL" alt="product" controls controlsList="nodownload"></video>
+                        </a>
                     </div>
                     <div class="andro_product-body">
                         <div class="andro_rating-wrapper">
