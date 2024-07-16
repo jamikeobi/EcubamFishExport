@@ -14,12 +14,12 @@ export class ContactComponent {
   @ViewChild('contactForm') contactForm!: NgForm;
   http: HttpClient = inject(HttpClient);
   constructor(private contactService: ContactService) { }
-
+  
   onSubmit(contactForm: NgForm) {
     this.submitted = true;
     if (contactForm.valid) {
     const header = new HttpHeaders({'EcubamsHeader':'Contact Form'});
-    const currentData = new Date().getFullYear();
+    const currentData = new Date().toISOString();
     const ContactData = {
       fname: this.contactForm.value.fname,
       lname: this.contactForm.value.lname,
@@ -29,7 +29,8 @@ export class ContactComponent {
       companys: this.contactForm.value.companys,
       country: this.contactForm.value.country,
       message: this.contactForm.value.message,
-      date: currentData
+      date: currentData,
+      id: Date.now().toString()
     };
     this.http.post<{name: string}>('https://ecubamsfishexport-default-rtdb.firebaseio.com/contactForm.json', ContactData, {headers: header}).subscribe((response) => {
       console.log(response);

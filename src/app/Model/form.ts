@@ -8,6 +8,7 @@ export class ContactForm{
         public companys: string,
         public country: string,
         public message: string,
-        public date: string
+        public date: string,
+        public id: string
     ){}
 }

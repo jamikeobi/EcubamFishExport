@@ -1,21 +1,46 @@
 <div class="container">
+  <h2>DashBoard</h2>
 
-    <h2>DashBoard</h2>
-    
-      <div class="content">
-        <ul>
-          <li *ngFor="let form of data">
-            <strong>{{ form.fname }}</strong><br>
-            Email: {{ form.lname }}<br>
-            Mobile: {{ form.email }}<br>
-            WhatsApp: {{form.companyradio}}<br>
-            Company: {{form.contactType}}<br>
-            Country: {{form.country}}<br>
-            Fish Name: {{form.message}}<br>
-            Date: {{form.date}}
-            <hr>
-          </li>
-        </ul>
+  <div class="content">
+  <div class="dashboard-item-container">
+    <div style="text-align: center" *ngIf="data.length === 0">
+      <h2>No Quote Form data has been created yet!!!</h2>
+    </div>
+    <div class="task-item card" *ngFor="let form of data">
+      <div class="card-header">
+        <h3>{{ form.fname }}</h3>
+        <button
+          class="delete-btn"
+          title="Delete"
+          (click)="toggleConfirmDialog(form.id)"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
       </div>
-  
-</div>  
+      <div class="card-body">
+        <p><b>Last Name: </b>{{ form.lname }}</p>
+        <p><b>Email: </b>{{ form.email }}</p>
+        <p><b>Phone Number: </b>{{ form.companyradio }}</p>
+        <p><b>Fish Type: </b>{{ form.contactType }}</p>
+        <p><b>Quantity: </b>{{ form.country }}</p>
+        <p><b>Message: </b>{{ form.message }}</p>
+        <p><b>Date: </b>{{ form.date }}</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>
+    bsd hbkjabdjbjbs\
+  </h2>
+  <!-- Confirmation Dialog -->
+  <div class="confirm-dialog" *ngIf="showConfirmDialog">
+    <div class="confirm-dialog-content">
+      <h2>Confirm Deletion</h2>
+      <p>Are you sure you want to delete this record?</p>
+      <div class="buttons">
+        <button class="confirm-btn" (click)="confirmDelete()">Yes</button>
+        <button class="cancel-btn" (click)="cancelDelete()">No</button>
+      </div>
+    </div>
+  </div>
+</div>
